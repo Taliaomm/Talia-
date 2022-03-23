@@ -1,0 +1,14 @@
+ if (transaction.To == address)
+                {
+                    balance += transaction.Amount;
+                }
+            }
+        }
+        return balance;
+    }
+    private Block CreateGenesisBlock()
+    {
+        List transactions = new List<Transaction> {new Transaction("", "", 0)};
+        return new Block(DateTime.Now, transactions, "0");
+    }
+}
